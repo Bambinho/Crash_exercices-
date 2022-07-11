@@ -1,0 +1,6 @@
+you can model real world with python using dictionary
+you can almost anything you want with a python list
+you can work with file using python 
+you can analize data using file in python
+you can make objects modeling real world using python 
+you can gave using python 

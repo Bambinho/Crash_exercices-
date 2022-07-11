@@ -1,0 +1,3 @@
+
+git config --global user.name 'Tim'
+timlinux@timlinux-HP-Notebook:~$ git config --global user.email 'tiemoko@ualberta.ca'
