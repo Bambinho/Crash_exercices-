@@ -6,9 +6,11 @@ class TestCase(unittest.TestCase):
 		r=pr.open_api(url,headers)
 		def test_python_repos(self):
 			self.assertEqual(self.r.status_code, 200)
-		def test_count(self):
-			self.assertGreater(9039426,self.r.json()['total_count'])
+		# def test_count(self):
+		# 	self.assertGreater(9039426,self.r.json()['total_count'])
 		def  test_item_count(self):
+			self.assertEqual(len(self.r.json()['items']), 30)
+		def tes_something(self):
 			self.assertEqual(len(self.r.json()['items']), 30)
 
 
