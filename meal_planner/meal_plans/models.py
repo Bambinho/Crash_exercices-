@@ -23,3 +23,4 @@ class Meal(models.Model):
 		return self.meal_name
 
 
+

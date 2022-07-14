@@ -1,0 +1,12 @@
+{% extends 'meal_plans/base.html' %}
+
+{% block content %}
+<h1> Day: {{day}} {{day.day_added}} </h1>
+<ul>
+	{% for meal in meals %}
+	<li> {{meal}} </li><br>
+	<br>
+	{% endfor %}
+	
+</ul>
+{% endblock content %}

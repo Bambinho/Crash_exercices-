@@ -11,4 +11,5 @@ urlpatterns=[
     path('pizzas/',views.pizzas, name='pizzas'),
     #Page showing the topping for a given pizza 
     path('pizzas/<int:top_id>/',views.topping,name='topping')
+
 ]
