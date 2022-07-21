@@ -2,6 +2,7 @@
 
 {% block content %}
 <br>
+<p> <a href="{% url 'meal_plans:new_day' %}"> Add New Day </a> </p>
 <ul>
 {% for day in days %}
 <li><a href="{% url 'meal_plans:meals' day.id %}">{{day}}&nbsp;&nbsp;&nbsp;&nbsp;{{day.date_added}} <br><br><br></a>

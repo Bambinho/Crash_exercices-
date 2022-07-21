@@ -1,5 +1,14 @@
+
+
 <a href="{% url 'meal_plans:index' %}"> Meal Planer Home page</a>-
 <a href="{% url 'meal_plans:day' %}"> Days</a>
+{% if user.is_authenticated %}
+	Hello,{{user.username }}
+<a href="{% url 'users:logout' %}"> Logout</a> 
+{% else %}
+-<a href="{% url 'users:login' %}"> Login </a>-
+<a href="{% url 'users:register' %}"> Register </a>
+{% endif %}
 
 
 {% block content %}{% endblock content %}

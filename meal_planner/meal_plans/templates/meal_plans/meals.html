@@ -2,10 +2,13 @@
 
 {% block content %}
 <h1> Day: {{day}} {{day.day_added}} </h1>
+<p><a href="{% url 'meal_plans:new_meal' day.id %}">New Meal</a></p>
 <ul>
 	{% for meal in meals %}
 	<li> {{meal}} </li><br>
+	<p><a href="{% url 'meal_plans:edit_meal' meal.id %}">edit</a></p>
 	<br>
+
 	{% endfor %}
 	
 </ul>

@@ -1,4 +1,12 @@
+
 <a href="{% url 'pizzas:index' %}"> Pizzeria </a>-
+{% if user.is_authenticated %}
+Hello, {{user.username}}-
+<a href="{% url 'users:logout' %}"> Logout</a>
+{% else %}
+<a href="{% url 'users:login' %}"> Log In</a>-
+<a href="{% url 'users:register' %}"> Register</a>
+{% endif %}
 <a href="{% url 'pizzas:pizzas' %}">Pizzas</a>
 
 {% block content %} {% endblock content %}

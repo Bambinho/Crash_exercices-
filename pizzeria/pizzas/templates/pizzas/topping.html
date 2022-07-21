@@ -3,11 +3,14 @@
 {% block content %}
 
 	<h1>{{pizza}}</h1>
+	<h2> <a href="{% url 'pizzas:new_top' pizza.id %}"> Add topping</a>  </h2>
 	<h2>Toppings:</h2>
 <ul>
 	{% for topping in toppings %}
-	   
 	   <li>{{topping.name}}</li>
+	   <p><a href="{% url 'pizzas:edit_top' topping.id %}"> Edit</a> </p>
+	   {% empty %}
+	   <p> There is no topping on this pizza</p>
 	{% endfor %}
 </ul>
 

@@ -1,0 +1,9 @@
+{% extends 'meal_plans/base.html' %}
+
+{% block content %}
+<form action="{% url 'meal_plans:new_day'  %}" method="POST">
+	{% csrf_token %}
+	{{form.as_p}}
+	<button name='submit'> Save </button>
+</form>
+{% endblock content %}

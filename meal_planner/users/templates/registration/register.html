@@ -1,0 +1,12 @@
+{% extends 'meal_plans/base.html' %}
+
+{% block content %}
+<form action="{% url 'users:register' %}" method="POST">
+	{% csrf_token %}
+	{{form.as_p}}
+	<button name='submit'> Register </button>
+	<input type="hidden" name="next" value="{% url 'meal_plans:index' %}">
+</form>
+
+
+{% endblock content %}
